@@ -6,7 +6,7 @@ function Header() {
   <div className='navBar'>
 
     <Link className='navbar-logo' href="/index">
-      <h2> Paula Disbrowe </h2>
+      <h2 className='logo'> Paula Disbrowe</h2>
     </Link>
     <div className='navbar-Links'>
       <Link className='navbar-home' href="/index">
@@ -34,8 +34,8 @@ function Header() {
     <style jsx>{`
       @media only screen and (min-width : 321px) and (max-width : 767px)  {
         @font-face {
-          font-family: 'ebgaramond';
-          src: url('../static/fonts/ebgaramond/EBGaramond-Regular.ttf') format('truetype')
+          font-family: 'Playfair Display', serif;
+          @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
         }
 
 
@@ -56,7 +56,7 @@ function Header() {
           grid-template-areas:
           'logo navBarLinks navBarLinks';
           align-self: center;
-          font-family: ebgaramond;
+          font-family: 'Playfair Display', serif;
           grid-gap: 10px 10px;
           margin-bottom: -50px;
         }
@@ -122,17 +122,19 @@ function Header() {
 
     @media only screen and (min-width: 768px) {
       @font-face {
-        font-family: 'ebgaramond';
-        src: url('../static/fonts/ebgaramond/EBGaramond-Regular.ttf') format('truetype')
+        font-family: 'Playfair Display', serif;
+        @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
       }
 
-
+      body {
+        font-family: 'Playfair Display', serif;
+      }
 
       a {
         text-align: center;
         align-self: center;
         text-decoration: none;
-        color: yellow;
+        color: white;
       }
 
       .navBar {
@@ -145,10 +147,10 @@ function Header() {
         grid-template-areas:
         'logo   navbar-Links';
         grid-gap: 5px 10px;
-        font-family: ebgaramond;
+        font-family: 'Playfair Display', serif;
         margin-bottom: -30px;
         background-color: black;
-        color: yellow;
+
   }
 
 
@@ -158,6 +160,13 @@ function Header() {
         margin: 10px;
         text-decoration: none;
         align-self: center;
+
+      }
+
+      .logo {
+        text-align: center;
+        color: white;
+        font-family: 'Playfair Display', serif;
       }
 
       .navbar-Links {
@@ -175,7 +184,7 @@ function Header() {
         display: inline;
         text-decoration: none;
         align-self: center;
-        color: yellow;
+        color: white;
       }
 
       .navbar-portfolio {
